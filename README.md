@@ -16,6 +16,7 @@ The goal of this repository is to benchmark popular frameworks to be used as a R
 ## Frameworks
 
 - [Flight](https://github.com/mikecao/flight) *(v1.3)*
+- [Symfony](https://github.com/symfony/symfony) *(v5.3)*
 
 ## Running Benchmark
 
