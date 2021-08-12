@@ -18,7 +18,7 @@ $app->route('/', function () {
 $app->route('/users', function () use ($app) {
     $db = $app->db();
 
-    $sth = $db->prepare("SELECT name, email FROM users WHERE email LIKE '%example.com%'");
+    $sth = $db->prepare("SELECT id, name, email FROM users WHERE email LIKE '%example.com%'");
     $sth->execute();
 
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
