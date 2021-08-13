@@ -51,13 +51,13 @@ The goal of this repository is to benchmark popular frameworks to be used as a R
     - Run `cp .env.example .env` followed by `php artisan key:generate` from the `lumen` directory.
     - Open `.env` file and set the `DB_CONNECTION` variables value to `sqlite` and comment out all the remaining `DB_*` variables.
     - Run `php artisan migrate` from the `lumen` directory.
-    - To run the project, run: `php artisan serve`
+    - To run the project, run: `php -S localhost:8000 -t public`
 - Symfony:
     - Run `composer install`
     - Run `touch var/data.db` from the `symfony` directory.
     - Create a `.env` file and set the `DATABASE_URL` to: `DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"`
     - Run `php bin/console doctrine:migrations:migrate` and confirm if asked.
-    - To run the project, run: php -S localhost:8000 -t public
+    - To run the project, run: `php -S localhost:8000 -t public`
 - Express:
     - Run `touch database.sqlite` from the `expressjs` directory
     - Run: `npm install`
@@ -116,4 +116,4 @@ The data.json file in each project is used during the test for the **Write** cri
 
 <img src="results/local/rps_compute.svg">
 
-> *[P.S.: The results may be subject to change when we add more frameworks.]*
+> *[P.S.: The results may be subject to change as we add more frameworks.]*
